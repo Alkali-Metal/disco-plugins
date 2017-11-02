@@ -9,10 +9,10 @@ Random is a plugin which responds to various commands with a random response, so
 
 ### roll
 This command allows you to randomly roll any number of dice or just pick a random number. (Response formats may be different in actual bot.)
-```
-Syntax: {Command Prefix}random roll [Amount] [Sides]
-```
-If `[Amount]` isn't specified, the bot will assume it to be the "default_amount" which is assigned in the plugin configuration file.
+
+> **Syntax:** `{Command Prefix}random roll [Amount] [Sides]`
+>
+>If `[Amount]` isn't specified, the bot will assume it to be the "default_amount" which is assigned in the plugin configuration file.
 
 
 Examples:
@@ -29,9 +29,9 @@ Examples:
 
 ### formula
 This command responds with a random chemical formula, either organic or inorganic, it's just whatever formulas I feel like having in the response choices.
-```
-Syntax: {Command Prefix}random formula
-```
+
+> **Syntax:** `{Command Prefix}random formula`
+
 
 Example:
 ```
@@ -43,10 +43,10 @@ Example:
 
 ## object
 This command takes a list of arguments and randomly selects one of them. Aliased to `choice`
-```
-Syntax: {Command Prefix}random object <objects...>
-```
-Where `<objects...>` is a space separated list of values to pick from.
+
+> **Syntax:** `{Command Prefix}random object <objects...>`
+
+> Where `<objects...>` is a space separated list of values to pick from.
 
 Examples:
 ```
@@ -61,10 +61,10 @@ Examples:
 
 ## shuffle
 This command takes a list of arguments, shuffles them, then returns it to chat.
-```
-Syntax: {Command Prefix}random shuffle <objects...>
-```
-Where `<objects...>` is a space separated list of values.
+
+> **Syntax:** `{Command Prefix}random shuffle <objects...>`
+>
+> Where `<objects...>` is a space separated list of values.
 
 Example:
 ```
@@ -76,9 +76,8 @@ Example:
 
 ## gif
 This command responds with a gif which was pre-approved to be in the list.
-```
-Syntax: {Command Prefix}random gif
-```
+
+> **Syntax:** `{Command Prefix}random gif`
 
 Example:
 ```
