@@ -10,7 +10,7 @@ Random is a plugin which responds to various commands with a random response, so
 ### roll
 This command allows you to randomly roll any number of dice or just pick a random number. (Response formats may be different in actual bot.)
 
-> **Syntax:** `{Command Prefix}random roll [Amount] [Sides]`
+> **Syntax:** `{Command Prefix}random roll [Amount] <Sides>`
 >
 >If `[Amount]` isn't specified, the bot will assume it to be the "default_amount" which is assigned in the plugin configuration file.
 
