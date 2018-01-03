@@ -7,5 +7,4 @@ Li-Bot is built to have some fun commands as well as functionality, things such 
 
 ## Plugins
 Li-Bot uses the following plugins to function as of this point in time.
-  * [Voiceless Role]()
-  * [Random]()
+  * [Voiceless Role]( "Automated Voiceless Roles")
