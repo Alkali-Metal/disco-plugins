@@ -13,27 +13,42 @@ This plugin allows you to create custom commands within each server independantl
 
 ## Commands
 
+### Forewarning:
+When running most of the commands within this plugin, we have a slightly weird command syntax for it. Instead of using positional arguments for the variables, we use what we are deeming "options", what this entails is that they can be in any order within the command itself and only certain options are mandatory for each command as most of them have defaults that will be set if the option is not given by the user.
+|  Option  | Type     | Description | Default |
+| -------- | -------- | ----------- | ------- |
+| name     | String   | The name of the tag, this is how users will call the tag from a message. |  |
+| response | String   | This is what the bot will respond to with the tag. (This is the main body of the embed if `embed` set to `true`) |  |
+| embed    | Bool     | Tells the bot whether to embed this response or not. | False |
+| content  | String   | What the actual content of the message with the embed will have. | Tag embed: |
+| title    | String   | What the title of the embed will have as its content. |  |
+| url      | String   | The hyperlinked URL that the title will point to. | (This documentation) |
+| colour   | Hex code | The colour of the side bar of the embed. | 7289DA |
+| footer   | String   | The content within the footer. |  |
+| level    | Integer  | The permission level required to run the command. | 0 |
+| global   | Bool     | Whether or not the tag will be made as a global tag or not. Only global administrators can set this to true. | False |
+
+</br>
+</br>
+
 ### Add
 
-This command allows you to add a tag.
+This command allows you to add a tag. Aliased to `create`.
 
 > **Syntax:** `{Command Prefix}tag add <Options...>`
 >
->This command is odd in the sense that it doesn't have any positional arguments but it has options. The only mandatory arguments are `name` and `response`. Valid options are as follows:</br>
-> `name`: (Type: string) The name of the command, this is how people will call the command.</br>
-> `response`: (Type: string) The response of the command, this is also what will be the main body text of the embed if you set `embed` to true.</br>
-> `embed`: (Type: Boolean) Tells the bot whether or not you want the response as an embeded message. (Defaults to: `False`)</br>
-> `colour`: (Type: hex code (excluding the `#`)) The hex colour for the side bar of the embed. (defaults to: `7289DA`)</br>
-> `footer`: (Type: string) The footer text of the embed. (Defaults to: No text)</br>
-> `level`: (Type: integer) The permission level of the command. Valid permission levels can be found [here]("Permission Levels") (Defaults to: `0`)</br>
-> `content`: (Type: string) This is the text that appears before an embed. (Defaults to: `Tag embed:`)</br>
-> `url`: (Type: string) This is the URL that the title of the embed points to. (Defaults to: Documentation URL)</br>
-> `title`: (Type: string) This is the text of the title.(Defaults to: No text)</br>
-> `global`: (Type: Boolean) This is what determines whether or not the tag will be created as a global tag or as a local only tag. (Defaults to: `False`)
+> [See](#Forewarning) for the list of valid options and what they do.
 
 Examples:
 ```
-[1-3 examples]
+[Alkali] !tag add --response=Well hello there --name=Ohai there
+[Bot] Tag created with name "ohai-there"
+---------------------------------
+[Alkali] !tag create --name=spam --title=ingredients --response=eggs --content= --embed=1 --global=false --footer=recipe for POTATO SALAD
+[Bot] Tag created with name "spam"
+---------------------------------
+[Alkali] !tag add --response=salad --embed=false
+[Bot] Missing argument. ("name")
 ```
 
 </br>
@@ -44,8 +59,15 @@ Examples:
 
 ## Example Configuration
 
-Configuration Name: `[Config File Name]`
+This configuration is in the guild's configuration file under `tags`. But the bot will set it up correctly if the user runs the `tag setup` command.
 
 ```json
-[Example Config]
+{
+  "list": {},
+  "options": {
+    "log_channel": null,
+    "allow_global": true,
+    "logging": false
+  }
+}
 ```
