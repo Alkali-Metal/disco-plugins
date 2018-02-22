@@ -13,7 +13,9 @@ This plugin allows you to create custom commands within each server independantl
 
 ## Commands
 
-### Forewarning: <a id="options-list"></a>
+<a id="options-list"></a>
+
+### Forewarning:
 When running most of the commands within this plugin, we have a slightly weird command syntax for it. Instead of using positional arguments for the variables, we use what we are deeming "options", what this entails is that they can be in any order within the command itself and only certain options are mandatory for each command as most of them have defaults that will be set if the option is not given by the user.
 |  Option  | Type     | Description | Default |
 | -------- | -------- | ----------- | ------- |
