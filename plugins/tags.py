@@ -14,8 +14,7 @@ default_tags_config ={
     "options": {
         "log_channel": None,
         "allow_global": True,
-        "logging": False,
-        "is_default": False
+        "logging": False
     }
 }
 
