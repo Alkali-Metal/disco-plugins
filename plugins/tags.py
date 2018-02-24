@@ -310,10 +310,10 @@ class CustomCommands(Plugin):
                     #Increment counter
                     global_tags["tags"]["list"][command]["count"] += 1
 
-                GuildConfig.write(
-                    "default",
-                    global_tags
-                )
+                    GuildConfig.write(
+                        "default",
+                        global_tags
+                    )
 
 
 
@@ -338,10 +338,10 @@ class CustomCommands(Plugin):
                     #Increment counter
                     guild_tags["tags"]["list"][command]["count"] += 1
 
-                GuildConfig.write(
-                    event.message.guild.id,
-                    guild_tags
-                )
+                    GuildConfig.write(
+                        event.message.guild.id,
+                        guild_tags
+                    )
 
         else:
             return event.message.reply(
