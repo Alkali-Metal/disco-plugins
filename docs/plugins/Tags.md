@@ -1,5 +1,6 @@
 # Tags
 
+<a id="overview"></a>
 
 ## Overview
 
@@ -10,6 +11,8 @@ This plugin allows you to create custom commands within each server independantl
 -------------------------------------------
 
 </br>
+
+<a id="commands"></a>
 
 ## Commands
 
@@ -41,7 +44,8 @@ This command allows you to add a tag. Aliased to `create`.
 
 > **Syntax:** `{Command Prefix}tag add <Options...>`
 >
-> [See](#options-list) for the list of valid options and what they do.
+> See [here](#options-list) for the list of valid options and what they do.
+> The mandatory options are `name` and `response` for this command.
 
 Examples:
 ```
@@ -57,9 +61,82 @@ Examples:
 
 </br>
 
+### Remove
+
+This command allows you to remove a tag. Aliased to `delete`.
+
+> **Syntax:** `{Command Prefix}tag remove <Name> [Global]`
+>
+> `name`: The name of the tag you want to remove.
+> `global`: (Type: Bool) Indicates whether you are attempting to remove a global tag or not. Defaults to False
+
+Examples:
+```
+[Alkali] !tag remove spam
+[Bot] Removed tag with name `spam`. Data: <Data>
+---------------------------------
+[Alkali] !tag remove spam false
+[Bot] Tag `spam` doesn't exist.
+```
+
+</br>
+
+### Modify
+
+This command allows you to modify an already existing tag. Aliased to `edit`
+
+> **Syntax:** `{Command Prefix}tag modify <Options...>`
+>
+> See [here](#options-list) for a list of options and their valid data types.
+> The only mandatory option is `name` and it will overwrite the existing data for any other option given.
+
+Examples:
+```
+[Alkali] !tag modify --name=spam --response=eggs --content=foo --title=bar
+[Bot] Updated tag with name "spam".
+---------------------------------
+[Alkali] !tag edit --response=POTATO SALAD
+[Bot] Missing argument. ("name")
+---------------------------------
+[Alkali] !tag modify --name=foo --embed=true --title=Well hello there
+[Bot] Updated tag with name "foo".
+```
+
+</br>
+
+### Remove
+
+This command allows a guild to be setup with custom commands, using the [default configuration](#example-config "Example Configuration") setup
+
+> **Syntax:** `{Command Prefix}tag setup`
+
+Examples:
+```
+[Alkali] !tag setup
+[Bot] 
+```
+
+</br>
+
+### Remove
+
+This returns a list of all tags you have access to. (Both Guild and Global level) Though if you are incapable of running the tag there is an asterisk before it.
+
+> **Syntax:** `{Command Prefix}tag setup`
+
+Examples:
+```
+[Alkali] !tag list
+[Bot] Tags list: "*alkali, potato, spam, *foo"
+```
+
+</br>
+
 -------------------------------------------
 
 </br>
+
+<a id="example-config"></a>
 
 ## Example Configuration
 
