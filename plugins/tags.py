@@ -1,3 +1,8 @@
+"""
+This plugin allows users to be able to create custom commands for within their
+guild, in order to modify a tag or remove it, you must have at least the
+permission level from the tag itself.
+"""
 from data.types.bot.plugin_config import PluginConfig
 from data.types.bot.guild_config import GuildConfig
 from data.types.discord.embeds import TagEmbed
