@@ -65,9 +65,9 @@ Examples:
 
 This command allows you to remove a tag. Aliased to `delete`.
 
-> **Syntax:** `{Command Prefix}tag remove <Name> [Global]`
+> **Syntax:** `{Command Prefix}tag remove <name> [global]`
 >
-> `name`: The name of the tag you want to remove.
+> `name`: The name of the tag you want to remove.  
 > `global`: (Type: Bool) Indicates whether you are attempting to remove a global tag or not. Defaults to False
 
 Examples:
@@ -104,7 +104,7 @@ Examples:
 
 </br>
 
-### Remove
+### Setup
 
 This command allows a guild to be setup with custom commands, using the [default configuration](#example-config "Example Configuration") setup
 
@@ -118,9 +118,9 @@ Examples:
 
 </br>
 
-### Remove
+### List
 
-This returns a list of all tags you have access to. (Both Guild and Global level) Though if you are incapable of running the tag there is an asterisk before it.
+This returns a list of all tags you have access to. (Both Guild and Global level) Though if you are incapable of running the tag there is an asterisk (`*`) before it.
 
 > **Syntax:** `{Command Prefix}tag setup`
 
