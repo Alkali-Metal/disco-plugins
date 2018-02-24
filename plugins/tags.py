@@ -380,6 +380,17 @@ class CustomCommands(Plugin):
                     Tags.error
                 )
 
+        #NOTE: Currently in testing, may not fully work.
+        #Ensure name doesn't contain any illegal characters
+        for char in illegal_name_characters:
+            if char in tag_data["name"]:
+                return event.msg.reply(
+                    Tags.illegal_char.format(
+                        "name",
+                        char
+                    )
+                )
+
 
         #Ensure level not greater than highest allowed
         max_perm_int = Config.load()["bot"]["max_permission_int"]
