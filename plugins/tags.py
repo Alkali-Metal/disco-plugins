@@ -274,7 +274,7 @@ class CustomCommands(Plugin):
         global_tags = GuildConfig.load("default")
         guild_list = PluginConfig.load("guild_list")
 
-        prefix = Config.load()["bot"]["commands_prefix"]
+        prefix = Config.load(self)["bot"]["commands_prefix"]
         both_have = False
 
 
@@ -399,7 +399,7 @@ class CustomCommands(Plugin):
 
 
         #Ensure level not greater than highest allowed
-        max_perm_int = Config.load()["bot"]["max_permission_int"]
+        max_perm_int = Config.load(self)["bot"]["max_permission_int"]
         if tag_data["level"] > max_perm_int:
             return event.msg.reply(
                 Tags.invalid_perm_int.format(
